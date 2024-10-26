@@ -5,13 +5,15 @@ let computerScore = 0;
 
 let playerScore = document.getElementById("player-h2");
 
-let p1Score = document.createElement("p");
+let p1Score = document.getElementById("p1Score");
+// let p1Score = document.createElement("p");
 p1Score.textContent = humanScore;
 playerScore.appendChild(p1Score);
 
 let cpuScore = document.getElementById("computer-h2");
 
-let p2Score = document.createElement("p");
+let p2Score = document.getElementById("p2Score");
+// let p2Score = document.createElement("p");
 p2Score.textContent = computerScore;
 cpuScore.appendChild(p2Score);
 
