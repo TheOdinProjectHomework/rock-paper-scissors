@@ -5,31 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, paper, scissors</title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css"></link>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section>
-        <h1>Rock, Paper, Scissors!</h1>
-        <div>
-            <div>
-                <h2 id="player-h2">Player</h2>
+    <header>
+        <h1>ROCK PAPER SCISSORS!</h1>
+    </header>
+    <section class="score-section">
+        <h2>Score 5 points to win the game</h2>
+        <div class="score-board">
+            <div class="score-div">
+                <h2 id="player-h2">Player:</h2>
+                <span id="p1Score"></span>
             </div>
-            <div>
-                <h2 id="computer-h2">Computer</h2>
+            <div class="score-div">
+                <h2 id="computer-h2">Computer:</h2>
+                <span id="p2Score"></span>
             </div>
         </div>
     </section>
-    <section>
+    <section class="selection-section">
         <h2>Choose your move:</h2>
-        <div>
-            <button id="rockBtn">Rock</button>
-            <button id="paperBtn">Paper</button>
-            <button id="scissorBtn">Scissor</button>
+        <div class="btns-div">
+            <button id="rockBtn">
+                <img src="./images/rock.svg" alt="Hand doing the rock sign" />
+            </button>
+            <button id="paperBtn">
+                <img src="./images/paper.svg" alt="Hand doing the paper sign" />
+            </button>
+            <button id="scissorBtn">
+                <img src="./images/scissors.svg" alt="Hand doing the scissors sign" />
+            </button>
         </div>
-        <span>
-            <h3>Winner:</h3>
+        <span class="winner-span">
+            <h3 class="winner-sign">Winner:</h3>
             <span id="winner-tag"></span>
         </span>
     </section>
+    <footer>
+        <p>Copyright &copy; 2024 cristian@portfolio</p>
+    </footer>
     
 </body>
 </html>
