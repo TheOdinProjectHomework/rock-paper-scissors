@@ -58,26 +58,24 @@ function getHumanChoice() {
 }
 
 function weHaveAwinner(playerScore, cpuScore) {
-    if(playerScore === 4) {
-        alert("You win!!!");
+    if(playerScore > 4) {
         humanScore = 0;
         computerScore = 0;
-        p1Score.textContent = humanScore;
-        p2Score.textContent = computerScore;
-    } else if(cpuScore === 4) {
-        alert("Computer wins!!!");
+        p1Score.innerHTML = humanScore;
+        p2Score.innerHTML = computerScore;
+        alert("You win!!!");
+    } else if(cpuScore > 4) {
         humanScore = 0;
         computerScore = 0; 
-        p1Score.textContent = humanScore;
-        p2Score.textContent = computerScore;
+        p1Score.innerHTML = humanScore;
+        p2Score.innerHTML = computerScore;
+        alert("Computer wins!!!");
     }
 }
 
 function playRound(humanChoice, computerChoice) {
     let winner = document.getElementById("winner-tag");
-    weHaveAwinner(humanScore, computerScore);
     if(humanChoice === computerChoice) {
-        // alert("Draw!!");
         winner.textContent = "It`s a draw!";
     }
     else if(
@@ -85,19 +83,17 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
-        // alert("Human wins this round");
         humanScore++;
         p1Score.textContent = humanScore;
         winner.textContent = "Human wins";
         console.log(`HumanScore: ${humanScore}, ComputerScore: ${computerScore}`);
-
     } else {
         computerScore++;
         p2Score.textContent = computerScore;
         winner.textContent = "Computer wins";
-        // alert("Computer wins this round");
         console.log(`HumanScore: ${humanScore}, ComputerScore: ${computerScore}`);
     }
+    weHaveAwinner(humanScore, computerScore);
 }
 
 // console.log("Loading game...");
